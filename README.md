@@ -47,18 +47,3 @@ temp_data.csv – Temporary uploaded data
 
 /forecast – Forecast endpoint logic
 
-🧪 How to Run
-Backend:
-
-bash
-Copy
-Edit
-python salesflask.py
-Frontend:
-
-bash
-Copy
-Edit
-npm install
-npm start
-Make sure the backend is running on http://localhost:5000 to connect properly.
