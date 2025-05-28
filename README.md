@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# 📈 Sales Forecasting App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered retail analytics platform for predicting and forecasting sales using machine learning. Built with React.js frontend and Flask backend, this application helps retailers make data-driven decisions by analyzing historical sales data and generating accurate forecasts.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **📊 Interactive Dashboard** - Real-time model performance metrics and store analytics
+- **🤖 AI-Powered Predictions** - Generate single sales predictions based on economic factors
+- **📅 Multi-Period Forecasting** - Create detailed sales forecasts for up to 52 weeks
+- **📁 CSV Data Upload** - Easy data import with automatic model training
+- **📈 Data Visualization** - Interactive charts and graphs using Recharts
+- **🏪 Multi-Store Support** - Analyze and forecast for multiple retail locations
+- **🎯 Real-time Analytics** - Live model performance tracking and validation
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Frontend:**
+- React.js 18+
+- Tailwind CSS
+- Recharts (Data Visualization)
+- Lucide React (Icons)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend:**
+- Python Flask
+- Scikit-learn / TensorFlow (ML Models)
+- Pandas (Data Processing)
+- NumPy (Numerical Computing)
 
-### `npm test`
+## 🚀 Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js 14+ and npm
+- Python 3.8+
+- Git
 
-### `npm run build`
+### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/sales-forecasting-app.git
+cd sales-forecasting-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install required packages
+npm install recharts lucide-react
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install Tailwind CSS
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 
-### `npm run eject`
+# Start development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend Setup
+```bash
+# Navigate to backend directory
+cd backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install Python dependencies
+pip install flask flask-cors pandas numpy scikit-learn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start Flask server
+python app.py
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will be available at `http://localhost:3000`
 
-## Learn More
+## 📋 Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Upload Data**: Start by uploading your historical sales CSV file
+2. **View Dashboard**: Monitor model performance and store statistics
+3. **Generate Predictions**: Input economic factors to predict sales
+4. **Create Forecasts**: Generate multi-week sales forecasts for planning
+5. **Analyze Results**: Use interactive charts to understand trends
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Required CSV Format
+Your sales data should include columns for:
+- Store ID
+- Date
+- Weekly Sales
+- Holiday Flag
+- Temperature
+- Fuel Price
+- CPI (Consumer Price Index)
+- Unemployment Rate
 
-### Code Splitting
+## 📊 Model Performance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application uses advanced machine learning algorithms to achieve:
+- Low RMSE (Root Mean Square Error) for accurate predictions
+- MAPE (Mean Absolute Percentage Error) tracking
+- Cross-validation for model reliability
+- Real-time performance monitoring
 
-### Analyzing the Bundle Size
+## 🎯 Key Metrics Tracked
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Model RMSE**: Prediction accuracy measurement
+- **Model MAPE**: Percentage error tracking
+- **Total Stores**: Multi-location support
+- **Training Records**: Data volume processed
+- **Forecast Accuracy**: Long-term prediction reliability
 
-### Making a Progressive Web App
+## 🔧 Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Environment Variables
+```env
+REACT_APP_API_BASE_URL=http://localhost:5000
+FLASK_PORT=5000
+FLASK_DEBUG=True
+```
 
-### Advanced Configuration
+### API Endpoints
+- `GET /` - API status and health check
+- `POST /upload` - Upload CSV and train model
+- `GET /stores` - Retrieve store information
+- `GET /model_info` - Get model performance metrics
+- `POST /predict` - Generate single prediction
+- `POST /forecast` - Create multi-period forecast
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📈 Future Enhancements
 
-### `npm run build` fails to minify
+- [ ] Advanced ML models (LSTM, Prophet)
+- [ ] Real-time data integration
+- [ ] Mobile responsive design improvements
+- [ ] Export functionality for forecasts
+- [ ] Advanced filtering and segmentation
+- [ ] Automated report generation
+- [ ] Integration with retail POS systems
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🐛 Known Issues
+
+- Large CSV files (>100MB) may take longer to process
+- Internet connection required for initial setup
+- Browser compatibility: Chrome, Firefox, Safari, Edge
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with Create React App
+- Powered by Recharts for data visualization
+- Icons provided by Lucide React
+- Styling with Tailwind CSS
+
+
+**⭐ Star this repository if you find it helpful!**
+
+Made with ❤️ for retail analytics and data-driven decision making.
