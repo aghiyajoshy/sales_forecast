@@ -16,7 +16,6 @@ An AI-powered retail analytics platform for predicting and forecasting sales usi
 
 **Frontend:**
 - React.js 18+
-- Tailwind CSS
 - Recharts (Data Visualization)
 - Lucide React (Icons)
 
@@ -45,9 +44,6 @@ npm install
 # Install required packages
 npm install recharts lucide-react
 
-# Install Tailwind CSS
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
 
 # Start development server
 npm start
